@@ -1,4 +1,3 @@
-import { Sidebar } from './Sidebar';
 import { FC, PropsWithChildren } from 'react';
 import {
   ContentContainer,
@@ -10,7 +9,6 @@ import { Header } from './Header';
 export const Layout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <LayoutContainer>
-      <Sidebar />
       <HeaderAndContentContainer>
         <Header />
         <ContentContainer>{children}</ContentContainer>

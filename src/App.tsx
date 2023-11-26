@@ -9,9 +9,9 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeProvider theme={theme}>
-       <Layout>
-         <Routing />
-       </Layout>
+        <Layout>
+          <Routing />
+        </Layout>
       </ThemeProvider>
     </BrowserRouter>
   )
