@@ -23,12 +23,12 @@
     "@vitejs/plugin-react": "^4.0.1",
     "vite": "^4.4.0",
     "vite-plugin-checker": "^0.6.1",
-    "vite-tsconfig-paths": "^4.2.0"
+    "vite-tsconfig-paths": "^4.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.61.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
-    "@typescript-eslint/eslint-plugin": "^5.61.0",
     "@typescript-eslint/parser": "^5.61.0",
     "eslint": "^8.44.0",
     "eslint-plugin-react-hooks": "^4.6.0",
