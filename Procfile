@@ -1,1 +1,1 @@
-web: echo "dzien dobry"
+web: npm i && npm start
