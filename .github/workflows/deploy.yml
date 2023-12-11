@@ -1,0 +1,24 @@
+name: Build and Deploy to Netlify
+on:
+  push:
+    branches: main # Trigger on main branch push
+jobs:
+  build:
+    runs-on: ubuntu-22.04 # use an ubuntu as a runner
+
+    steps:
+      - uses: actions/checkout@v3 # checkout to the repository
+      - uses: actions/setup-node@v4 # setup ned environment for the runner
+      - run: npm ci # install dependencies
+      - run: npm run build  # build the app
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v2.0 # Netlify deploy action
+        with:
+          publish-dir: './dist' # the build files location
+          # github-token is required by Netlify, it will be added by GitHub itself
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: "Deploy from GitHub Actions"
+        env: # the secrets available in the Netlify app config
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
